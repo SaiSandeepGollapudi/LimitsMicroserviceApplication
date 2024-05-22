@@ -13,6 +13,13 @@ public class LimitsController {
 	@Autowired
 	private Configuration configuration;
 	
+
+//The limits service provides dynamic minimum and maximum constraints for certain operations or 
+//	functionalities within the application. It ensures that these constraints can be easily adjusted 
+//	without code changes, allowing for better control over resources, preventing abuse, and enforcing 
+//	business logic constraints. By using externalized configuration, it enables dynamic adjustments 
+//	without redeployment, thus enhancing flexibility and scalability.
+	
 	@GetMapping("/limits")
 	public Limits retrieveLimits() {
 		return new Limits(configuration.getMinimum(),configuration.getMaximum());

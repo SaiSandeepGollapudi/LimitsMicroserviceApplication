@@ -5,6 +5,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 @ConfigurationProperties("limits-microservice")
+//In the step, we enhanced our limit service to get the properties from a property file.
+//In the subsequent steps,we would want to connect our limit service to a centralized configuration server.
+
 public class Configuration {
 
 	private int minimum;
